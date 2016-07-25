@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: From Beast to Least
-subtitle: "My journey in the world Software Development"
-description:
+title: JLucas
+subtitle: "My journey as a developer, from least to beast"
+description:  An opnionated blog about software development, the web ecosystem, JS, UI, UX and a bunch of random observations about technology in general.
 author: João Lucas Lucchetta
-language:
-timezone:
+language: default
+timezone: America/Sao_Paulo
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://joaolucasl.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: blog/:title/
 permalink_defaults:
 
 # Directory
@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -52,7 +52,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: DD/MM/YYYY
 time_format: HH:mm:ss
 
 # Pagination
@@ -68,4 +68,6 @@ theme: joaolucasl
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@githubcom:joaolucasl/joaolucasl.github.io
+  branch: master

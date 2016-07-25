@@ -1,0 +1,29 @@
+language: node_js
+
+branches:
+  only:
+  - development
+
+before_install:
+- npm install -g hexo
+
+install:
+- npm install
+
+before_script:
+- git config --global user.name 'João Lucas Lucchetta'
+- git config --global user.email 'joao.lucas.lucchetta@gmail.com'
+
+script:
+- hexo generate
+
+after_success:
+- mkdir .deploy
+- cd .deploy
+- git clone --depth 1 --branch master --single-branch $DEPLOY . || (git init && git remote add -t master origin $DEPLOY)
+- rm -rf ./*
+- cp -r ../public/* .
+- git add -A .
+- git commit -m 'Updated '
+- git branch -m master
+- git push -q -u origin master
