@@ -1,0 +1,11 @@
+article(class=page.layout)
+  h2.title= page.title
+  div.meta
+    include _partial/article_meta
+
+    +date(page.date)
+
+    +category(page.categories)
+  div.article-body
+    != page.content
+include _partial/article_pagination
