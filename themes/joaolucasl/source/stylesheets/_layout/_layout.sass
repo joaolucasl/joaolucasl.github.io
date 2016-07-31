@@ -1,31 +1,25 @@
 // Globals
-#page-header
+.page-header
   @include container;
+  clear:both
   margin-bottom: 4.5em
+  text-align: center
 
-#masthead
-  width: 60%
-  max-width: 54rem
-  margin: 3em 0 0 3rem
-  overflow: auto
+  .site-title
+    font-size: 1.8em
+    margin-right: 1.5rem
+    float: left
 
-#site-title
-  font-size: 1.5em
-  float: left
-  margin-right: 1.5rem
-
-#site-slogan
-  font-size: 0.75em
-  border-left: solid 1px $border-color
-  padding-left: 1.5rem
-  margin-top: 0.85em
-  float: left
-  line-height: 1.75
+  .site-slogan
+    font-size: 0.75em
+    margin-top: 0.85em
+    line-height: 1.75
+    float:left
 
 #content
   @include container;
   clear: both
-  
+ 
   > header
     width: 60%
     max-width: 54rem
@@ -87,11 +81,8 @@ article h2, .article-list h2
 #content article
   @include span(8); 
   padding-left: .9375rem;
-  padding-right: .9375rem;
-  margin: 0 0 0 3rem
-  position: relative
-  
-  
+  padding-right: .9375rem; 
+  position: relative 
   
   h2.title
     font-size: 2.5em
@@ -184,14 +175,10 @@ article h2, .article-list h2
 
 // Extra Small Screen
 @include breakpoint(max-width 768px) 
+  .site-title,
+  .site-slogan
+    float: none !important
 
-  #masthead 
-    width: 90%
-    margin: 3em auto 0
-  
-  #site-slogan 
-    display: none
-  
   #content
     article,
     header 
@@ -227,28 +214,26 @@ article h2, .article-list h2
     margin: 0 auto
   
 //  SMALL SCREEN
-@include breakpoint(769px 991px) 
+@include breakpoint(769px 991px)
+ .site-title,
+ .site-slogan
+   float: none !important
 
-  #masthead
-    width: 90%
-    margin: 3em auto 0
-  
-  #content
-    article,
-    header 
-      @include span(8);
-      
+ #content
+  article, header 
+    @include span(8);
+
   #article-list-pagination,
   #article-pagination 
     width: 90%
     margin: 0 auto
-  
+
   #page-footer section
     width: 90%
     margin: 0 auto
   
   //  MEDIUM SCREEN
-  @include breakpoint(992px 1200px)
-    #content
-      article
-        @include span(8);
+@include breakpoint(992px 1200px)
+  #content article
+      @include span(8);
+  
