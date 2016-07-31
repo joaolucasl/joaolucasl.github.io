@@ -287,37 +287,27 @@ hr {
   border-top: dotted 0.075em #555;
   height: 1.5em; }
 
-#page-header {
-  max-width: 70em;
+.page-header {
+  max-width: 55em;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4.5em; }
-  #page-header:after {
+  margin-bottom: 4.5em;
+  text-align: center; }
+  .page-header:after {
     content: " ";
     display: block;
     clear: both; }
-
-#masthead {
-  width: 60%;
-  max-width: 54rem;
-  margin: 3em 0 0 3rem;
-  overflow: auto; }
-
-#site-title {
-  font-size: 1.5em;
-  float: left;
-  margin-right: 1.5rem; }
-
-#site-slogan {
-  font-size: 0.75em;
-  border-left: solid 1px #555;
-  padding-left: 1.5rem;
-  margin-top: 0.85em;
-  float: left;
-  line-height: 1.75; }
+  .page-header .site-title {
+    font-size: 1.8em;
+    margin-right: 1.5rem;
+    float: left; }
+  .page-header .site-slogan {
+    font-size: 0.75em;
+    margin-top: 0.85em;
+    line-height: 1.75; }
 
 #content {
-  max-width: 70em;
+  max-width: 55em;
   margin-left: auto;
   margin-right: auto;
   clear: both; }
@@ -382,7 +372,6 @@ article h2, .article-list h2 {
   margin-right: 1.20482%;
   padding-left: .9375rem;
   padding-right: .9375rem;
-  margin: 0 0 0 3rem;
   position: relative; }
   #content article h2.title {
     font-size: 2.5em;
@@ -458,11 +447,9 @@ article h2, .article-list h2 {
   margin-right: 1rem; }
 
 @media (max-width: 768px) {
-  #masthead {
-    width: 90%;
-    margin: 3em auto 0; }
-  #site-slogan {
-    display: none; }
+  .site-title,
+  .site-slogan {
+    float: none !important; }
   #content article,
   #content header {
     width: 90%;
@@ -493,23 +480,22 @@ article h2, .article-list h2 {
     margin: 0 auto; } }
 
 @media (min-width: 769px) and (max-width: 991px) {
-  #masthead {
-    width: 90%;
-    margin: 3em auto 0; }
-  #content article,
-  #content header {
+  .site-title,
+  .site-slogan {
+    float: none !important; }
+  #content article, #content header {
     width: 66.26506%;
     float: left;
     margin-right: 1.20482%; }
-  #article-list-pagination,
-  #article-pagination {
+  #content #article-list-pagination,
+  #content #article-pagination {
     width: 90%;
     margin: 0 auto; }
-  #page-footer section {
+  #content #page-footer section {
     width: 90%;
     margin: 0 auto; } }
 
-@media (min-width: 769px) and (max-width: 991px) and (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   #content article {
     width: 66.26506%;
     float: left;
